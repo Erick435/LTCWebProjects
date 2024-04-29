@@ -3,7 +3,7 @@
 let numberInputOne = document.getElementById('numberInputOne').value;
 let numberInputTwo = document.getElementById('numberInputTwo').value;
 
-let calculateAnswer = document.getElementById("calculateAnswer").value;
+let calculateAnswer = document.getElementById("calculateAnswer");
 
 let answer = 0;
 
@@ -35,33 +35,34 @@ function addNumbers(){
     numberInputOne = document.getElementById("numberInputOne").value;
     numberInputTwo = document.getElementById("numberInputTwo").value;
     answer = Number(numberInputOne) + Number(numberInputTwo);
-    console.log("value of input 1: " + numberInputOne + " value of input 2: " + numberInputTwo + "\nvalue of answer: " + answer);
-    alert(answer)
-    calculateAnswer.innerText = answer;
+    console.log("value of input 1: " + numberInputOne + "\nvalue of input 2: " + numberInputTwo + "\nvalue of answer: " + answer);
+    
+    calculateAnswer.value = answer;
 }
 
 function subtractNumbers(){
     numberInputOne = document.getElementById("numberInputOne").value;
     numberInputTwo = document.getElementById("numberInputTwo").value;
     answer = Number(numberInputOne) - Number(numberInputTwo);
-    calculateAnswer.innerText = answer;
-    console.log("value of input 1: " + numberInputOne + " value of input 2: " + numberInputTwo + "\nvalue of answer: " + answer);
+    console.log("value of input 1: " + numberInputOne + "\nvalue of input 2: " + numberInputTwo + "\nvalue of answer: " + answer);
+    
+    calculateAnswer.value = answer;
 }
 
 function divideNumbers(){
     numberInputOne = document.getElementById("numberInputOne").value;
     numberInputTwo = document.getElementById("numberInputTwo").value;
     answer = Number(numberInputOne) / Number(numberInputTwo);
-    calculateAnswer.innerText = answer;
-    console.log("value of input 1: " + numberInputOne + " value of input 2: " + numberInputTwo + "\nvalue of answer: " + answer);
+    console.log("value of input 1: " + numberInputOne + "\nvalue of input 2: " + numberInputTwo + "\nvalue of answer: " + answer);
+    calculateAnswer.value = answer;
 }
 
 function multiplyNumbers(){
     numberInputOne = document.getElementById("numberInputOne").value;
     numberInputTwo = document.getElementById("numberInputTwo").value;
     answer = Number(numberInputOne) * Number(numberInputTwo);
-    calculateAnswer.innerText = answer;
-    console.log("value of input 1: " + numberInputOne + " value of input 2: " + numberInputTwo + "\nvalue of answer: " + answer);
+    console.log("value of input 1: " + numberInputOne + "\nvalue of input 2: " + numberInputTwo + "\nvalue of answer: " + answer);
+    calculateAnswer.value = answer;
 }
 
 window.onload = init;
