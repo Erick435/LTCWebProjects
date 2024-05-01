@@ -20,8 +20,8 @@
                     <a href="index.html" class="nav-link text-white" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark active" data-bs-toggle="dropdown" href="#" role="button"
-                        aria-haspopup="true" aria-expanded="false">Calculators</a>
+                    <a class="nav-link dropdown-toggle text-dark active" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="true" aria-expanded="false">Calculators</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="./mortgage.html">Mortgage Calculator</a>
                         <a class="dropdown-item" href="./compound.html">Compound Interest Cal</a>
@@ -37,39 +37,105 @@
 
 
     <main class="">
-        <h1 class="container pb-5 pt-3">Welcome!</h1>
+        <h1 class="container pb-5 pt-3 d-flex justify-content-center">Compound Interest Calculator</h1>
 
-        <section class="bg-light border px-2 my-5">
-            <h1 class="container">How to use Mortgage Calculator</h1>
+        <section class="bg-light border px-2 my-4">
+            <h1 class="container pt-3">How to use the CD Calculator</h1>
 
-            <p class="container">This calculator tool will help you estimate your monthly payments on a your mortgage, as well as the
-                total interest accrual over the life of the loan. To calculate your loan cost, just enter the loan
-                amount, interest rate, loan term and then click calculate. The calculator will then show you what you
-                can expect your monthly payment to be, as well as what the loan will really cost you (principal plus
-                interest).</p>
+            <p class="container">
 
-                <a href="./mortgage.html" class="container d-flex justify-content-center btn btn-primary">Start Now!</a>
-        </section>
+                Enter the deposit amount, or the fixed amount of money you’re comfortable leaving in a CD untouched for
+                the whole term.
 
-        <section class="bg-light border px-2 my-5">
-            <div class="container">
-                <h3>About Us</h3>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, saepe quae? Aliquid provident
-                    repudiandae rem itaque nobis perspiciatis. Excepturi placeat sequi sapiente quibusdam vitae,
-                    reprehenderit consequatur suscipit harum eos voluptate, maiores, perferendis provident? Pariatur sed
-                    impedit molestiae labore odit voluptates saepe aspernatur odio voluptatibus atque, dolores
-                    blanditiis. Ea praesentium aperiam facilis voluptas modi quae. Placeat beatae, temporibus veritatis
-                    distinctio voluptate commodi saepe quia tempore mollitia nam sed ipsum eius sit, odit nihil sint,
-                    ullam officia.</p>
+                Enter the CD term length and type a year. Use whole numbers only.
+
+                Enter the APY. Plug in current CD rates at various online banks as well as your bank’s CD rates to
+                compare different options.</p>
+
+            <div class="container my-5">
+                <section>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="loanAmountInput" required
+                            placeholder="loanAmountInput" />
+                        <label for="loanAmountInput" class="text-dark">
+                            Loan amount
+                        </label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="annualInterestInput" required
+                            placeholder="annualInterestInput" />
+                        <label for="annualInterestInput" class="text-dark">
+                            Annual Interest Rate
+                        </label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="amountYears" required placeholder="amountYears" />
+                        <label for="amountYears" class="text-dark">
+                            Loan amount in Years
+                        </label>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button class=" btn btn-primary px-4" id="calculateButton">Calculate</button>
+                    </div>
+
+
+
+                </section>
+
+                <section>
+
+                    <h2 class="mt-4">Total Balance</h2>
+
+                    <h1 id="monthlyPaymentAmount" class="display-1 my-5">$0.00</h1>
+                    
+                    <h3>You made <span class="display-1" id="profitAmount">$0.00</span> profit</h3>
+
+                </section>
             </div>
+
         </section>
 
+        <section class="bg-light my-5">
+
+            <h2 class="container pt-4">How we calculate</h2>
+
+            <hr class="container">
+
+            <section class="container">
+                <h4>A = P x (1 + r/365)^(365 x t)</h4>
+
+                <div>
+                    <h4 class="my-4">For example: </h4>
+                    <div class="d-flex">
+                        <h4>(P)rincpal = $10000 <br>
+                            Annual Interest rate (r) = 2.5% <br>
+                            Years to pay (t) = 5 <b></b>
+                        </h4>
+                        <h4 class="">
+                            <br>
+                            <span class="mx-5">-></span>2.5/100 = 0.025 <br>
+                            <span class="mx-5">-></span>5
+                        </h4>
+                    </div>
+                </div>
+
+                <div>
+                    <hr>
+                    <h4 class="my-4">Total Balance: $ 11,314.08</h4>
+                </div>
+
+            </section>
+
+        </section>
 
     </main>
 
-
-
+    
+    
     <footer class=" bg-dark">
         <div class="container d-flex justify-content-around py-2">
             <a href="#" class="text-white">Privacy & Terms</a>
@@ -83,7 +149,8 @@
         </div>
     </footer>
 
-
+    
+    <script src="./scripts/compound.js"></script>
 
 
     <!-- Bootstrap JavaScript Libraries -->
