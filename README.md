@@ -12,5 +12,5 @@ This repository contains web projects created during my Learning To Code course.
 
 
 ## About the Learning To Code Course
-Learn To Code is a program in which I have enrolled  hanks to Year Up, which teaches me the basics as well as advanced information about programming languages, more specifically frontend (HTML, CSS, bootstrap, and Javascript).
+Learn To Code is a program in which I have enrolled  thanks to Year Up, which teaches me the basics as well as advanced information about programming languages, more specifically frontend (HTML, CSS, bootstrap, and Javascript).
 
