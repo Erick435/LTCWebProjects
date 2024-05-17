@@ -250,6 +250,35 @@ let employees = [
     }
 ];
 
+const dropDownSelect = document.querySelector("#dropDownSelect");
+
 window.onload = function () {
 
+    dropDownNames();
+
+    dropDownSelect.onclick = selectedName;
+
+}
+
+function dropDownNames(){
+    console.log("dropDownSelect was called");
+
+    for (let e of employees){
+        let option = new Option(e.name, e.id);
+        
+        dropDownSelect.appendChild(option)
+    }
+
+}
+
+function selectedName(){
+
+
+
+}
+
+function displayData(){
+
+    
+    
 }

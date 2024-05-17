@@ -24,36 +24,36 @@
         </header>
 
 
-        
-        <main class="container">
 
-            <h1 style="text-align: center;" class="my-4">Employees and Projects</h1>
-            
-            <div class="d-flex justify-content-center my-5">
-                <select id="dropDownSelect">
-                    <option value="">Select...</option>
-                </select>
+        <main class="container my-5">
+
+            <div id="petsDiv">
+                
+
             </div>
 
-            <div>
-                <table class="table table-striped">
-                    <tbody id="tableBody">
 
-                    </tbody>
-                </table>
-            </div>
-            
         </main>
 
 
-        
+
         <footer>
             <!-- place footer here -->
         </footer>
 
+        <style>
+            #petsDiv {
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: start;
+            }
+            /* .card{
+                width: 21rem;
+            } */
+        </style>
 
         <script src="scripts/index.js"></script>
-        
+
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
