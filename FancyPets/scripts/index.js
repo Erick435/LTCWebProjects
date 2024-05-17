@@ -72,7 +72,7 @@ function buildCard(pet) {
     cardImage.src = pet.image;
     cardImage.alt = pet.name;
     cardImage.classList.add("card-img-top");
-    cardImage.style.width = "30rem";
+    cardImage.style.width = "auto";
     cardImage.style.height = "25rem";
     cardDiv.appendChild(cardImage);
 
